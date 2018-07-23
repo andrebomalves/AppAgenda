@@ -1,0 +1,51 @@
+﻿@model AppAgenda.Models.Agendamento
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Agendamento</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="AgendaId" />
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataNascimento" class="control-label"></label>
+                <input asp-for="DataNascimento" class="form-control" />
+                <span asp-validation-for="DataNascimento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataHoraInicio" class="control-label"></label>
+                <input asp-for="DataHoraInicio" class="form-control" />
+                <span asp-validation-for="DataHoraInicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataHoraFim" class="control-label"></label>
+                <input asp-for="DataHoraFim" class="form-control" />
+                <span asp-validation-for="DataHoraFim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Observacao" class="control-label"></label>
+                <textarea asp-for="Observacao" class="form-control"></textarea>
+                <span asp-validation-for="Observacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
